@@ -59,16 +59,16 @@ class pivot:
     #         return render(request, self.template, context=self.context)
 
     #requires login
-    class Farmers(LoginRequiredMixin, View):
+    class Farmers( View):
         template = "Pivot/Farmers.html"
         #create context dictionary with all the farmers
         context = {}
 
         def get(self, request):
-            self.context["Farmers"]= Farmer.objects.all()
+            self.context["Farmers"] = Farmer.objects.all()
             return render(request, self.template, context=self.context)
 
-    class FarmersForm(LoginRequiredMixin,View):
+    class FarmersForm(View):
         template = "Pivot/FarmerForm.html"
         context = {"FarmerForm": FarmerForm()}
 
@@ -85,7 +85,7 @@ class pivot:
                 self.context["errors"] = form.errors.get_json_data()["__all__"]
                 return render(request, self.template, context=self.context)
 
-    class Harvests(LoginRequiredMixin,View):
+    class Harvests(View):
         template = "Pivot/Harvests.html"
         context = {}
 
@@ -93,7 +93,7 @@ class pivot:
             self.context["Harvests"]= Harvest.objects.all()
             return render(request, self.template, context=self.context)
 
-    class HarvestForm(LoginRequiredMixin,View):
+    class HarvestForm(View):
         template = "Pivot/HarvestForm.html"
         context = {}
 
@@ -117,7 +117,7 @@ class pivot:
                 #self.context["errors"] = form.errors.get_json_data()["__all__"]
                 return render(request, self.template, context=self.context)
             
-    class Inputs(LoginRequiredMixin, View):
+    class Inputs( View):
         template = "Pivot/Inputs.html"
         context = {"Inputs": Input.objects.all()}
 
@@ -126,7 +126,7 @@ class pivot:
         
 
              
-    class InputForm(LoginRequiredMixin, View):
+    class InputForm( View):
         template = "Pivot/InputForm.html"
         context = {"InputForm": InputForm()}
 
@@ -146,7 +146,7 @@ class pivot:
                 return render(request, self.template, context=self.context)
             
 
-    class FarmerReport(LoginRequiredMixin, View):
+    class FarmerReport( View):
         template = "Pivot/FarmerReport.html"
         context = {}
 

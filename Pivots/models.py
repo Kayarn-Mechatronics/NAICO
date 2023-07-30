@@ -46,6 +46,10 @@ class Farmer(models.Model):
     @property
     def pivot_name_str(self):
         return str(self.pivot_id.pivot_id) + "-" + self.pivot_id.pivot_name
+    
+    @property
+    def balance(self):
+        return self.harvest_balance - self.input_balance
 
     class Meta:
         db_table = 'Farmers'

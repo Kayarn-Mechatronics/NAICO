@@ -53,6 +53,7 @@
                     <th>Land</th>
                     <th>Total Harvest</th>
                     <th>Total Inputs</th>
+                    <th>Balance</th>
                     <th>More</th>
                   </tr>
                 </thead>
@@ -63,6 +64,7 @@
                     <td>{{farmer.land_size}} Sqm</td>
                     <td>{{farmer.harvest_balance|intcomma}} RWF</td>
                     <td>{{farmer.input_balance|intcomma}} RWF</td>
+                    <td>{{farmer.balance|intcomma}} RWF</td>
                     <td>
                         <a href="{% url 'InputForm' farmer.farmer_id %}" class="btn btn-primary btn-sm" role="button">Add Input</a>
                         <a href="{% url 'HarvestForm' farmer.farmer_id %}" class="btn btn-primary btn-sm" role="button">Add Harvest</a>

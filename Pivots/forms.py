@@ -13,7 +13,7 @@ class FarmerForm(forms.Form):
     first_name = forms.CharField(label='First Name', widget=forms.TextInput(attrs={'class': 'form-control', 'id':'first_name', 'placeholder':'First Name'}))
     last_name = forms.CharField(label='Last Name', widget=forms.TextInput(attrs={'class': 'form-control', 'id':'last_name', 'placeholder':'Last Name'}))
     phone_number = forms.CharField(label='Phone Number', widget=forms.TextInput(attrs={'class': 'form-control', 'id':'phone_number', 'placeholder':'Phone Number'}))
-    land_size = forms.IntegerField(label='Land Size (Acres)', widget=forms.NumberInput(attrs={'class': 'form-control', 'id':'land_size', 'placeholder':'Land Size'}))
+    land_size = forms.IntegerField(label='Land Size (SQM)', widget=forms.NumberInput(attrs={'class': 'form-control', 'id':'land_size', 'placeholder':'Land Size'}))
     ownership = forms.CharField(label='Ownership', widget=forms.TextInput(attrs={'class': 'form-control', 'id':'ownership', 'placeholder':'Ownership'}))
     land_owner = forms.CharField(label='Land Owner', widget=forms.TextInput(attrs={'class': 'form-control', 'id':'land_owner', 'placeholder':'Land Owner'}))
     land_owner_phone = forms.CharField(label='Land Owner Phone', widget=forms.TextInput(attrs={'class': 'form-control', 'id':'land_owner_phone', 'placeholder':'Land Owner Phone'}))
