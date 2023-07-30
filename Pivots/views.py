@@ -47,7 +47,7 @@ class authentication:
     class logout(View):
         def get(self, request):
             auth.logout(request)
-            return redirect(reverse('login'))
+            return redirect(reverse('Login'))
 
 
 class pivot:
